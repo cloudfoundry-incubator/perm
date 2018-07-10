@@ -1,4 +1,4 @@
-package permauth_test
+package oidcx_test
 
 import (
 	"fmt"
