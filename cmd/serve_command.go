@@ -143,7 +143,7 @@ func (cmd ServeCommand) Execute([]string) error {
 			},
 		}
 		oidcContext := oidc.ClientContext(context.Background(), tlsClient)
-		oidcIssuer, err := oidcx.GetOIDCIssuer(tlsClient, fmt.Sprintf("%s/oauth/token", cmd.OAuth2URL))
+		oidcIssuer, err := oidcx.GetIssuer(tlsClient, fmt.Sprintf("%s/oauth/token", cmd.OAuth2URL))
 		if err != nil {
 			return err
 		}

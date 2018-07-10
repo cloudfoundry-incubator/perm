@@ -16,7 +16,7 @@ type OIDCProviderConfiguration struct {
 	Issuer string `json:"issuer"`
 }
 
-func GetOIDCIssuer(client *http.Client, oidcProviderURL string) (string, error) {
+func GetIssuer(client *http.Client, oidcProviderURL string) (string, error) {
 	fullURL := fmt.Sprintf("%s%s", oidcProviderURL, OpenIDConfigurationEndpoint)
 
 	res, err := client.Get(fullURL)

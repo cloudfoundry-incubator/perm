@@ -5,13 +5,13 @@ import (
 
 	"net/http"
 
-	"code.cloudfoundry.org/perm/pkg/permauth"
+	. "code.cloudfoundry.org/perm/pkg/oidcx"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"github.com/onsi/gomega/ghttp"
 )
 
-var _ = Describe("GetOIDCIssuer", func() {
+var _ = Describe("GetIssuer", func() {
 	var (
 		server   *ghttp.Server
 		tokenURL string
@@ -33,7 +33,7 @@ var _ = Describe("GetOIDCIssuer", func() {
 				ghttp.RespondWith(200, `{"issuer": "foo"}`),
 			),
 		)
-		issuer, err := permauth.GetOIDCIssuer(http.DefaultClient, tokenURL)
+		issuer, err := GetIssuer(http.DefaultClient, tokenURL)
 		Expect(err).NotTo(HaveOccurred())
 		Expect(issuer).To(Equal("foo"))
 	})
@@ -45,7 +45,7 @@ var _ = Describe("GetOIDCIssuer", func() {
 				ghttp.RespondWith(404, `{"error": "not found"}`),
 			),
 		)
-		_, err := permauth.GetOIDCIssuer(http.DefaultClient, tokenURL)
+		_, err := GetIssuer(http.DefaultClient, tokenURL)
 		Expect(err).To(MatchError("HTTP bad response: 404 Not Found"))
 	})
 
@@ -56,7 +56,7 @@ var _ = Describe("GetOIDCIssuer", func() {
 				ghttp.RespondWith(200, `{"issuer": "foo....`),
 			),
 		)
-		_, err := permauth.GetOIDCIssuer(http.DefaultClient, tokenURL)
+		_, err := GetIssuer(http.DefaultClient, tokenURL)
 		Expect(err).To(MatchError("unexpected EOF"))
 	})
 })
