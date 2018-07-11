@@ -17,7 +17,7 @@ import (
 
 	"code.cloudfoundry.org/lager"
 	"code.cloudfoundry.org/perm/cmd/flags"
-	"code.cloudfoundry.org/perm/pkg/api"
+	"code.cloudfoundry.org/perm/api"
 	"code.cloudfoundry.org/perm/cmd/internal/cryptox"
 	"code.cloudfoundry.org/perm/cmd/internal/ioutilx"
 	"code.cloudfoundry.org/perm/pkg/logx/cef"
