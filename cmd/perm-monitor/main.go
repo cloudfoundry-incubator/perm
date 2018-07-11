@@ -21,7 +21,7 @@ import (
 	"time"
 
 	cmdflags "code.cloudfoundry.org/perm/cmd/flags"
-	"code.cloudfoundry.org/perm/pkg/ioutilx"
+	"code.cloudfoundry.org/perm/cmd/internal/ioutilx"
 	"code.cloudfoundry.org/perm/pkg/monitor"
 	"code.cloudfoundry.org/perm"
 )
