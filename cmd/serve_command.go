@@ -22,7 +22,7 @@ import (
 	"code.cloudfoundry.org/perm/cmd/internal/ioutilx"
 	"code.cloudfoundry.org/perm/pkg/logx/cef"
 	"code.cloudfoundry.org/perm/pkg/logx/lagerx"
-	"code.cloudfoundry.org/perm/pkg/migrations"
+	"code.cloudfoundry.org/perm/internal/migrations"
 	"code.cloudfoundry.org/perm/pkg/oidcx"
 	"code.cloudfoundry.org/perm/pkg/permstats"
 	"code.cloudfoundry.org/perm/pkg/sqlx"
