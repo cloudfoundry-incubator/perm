@@ -6,7 +6,7 @@ import (
 
 	"code.cloudfoundry.org/perm/pkg/api/repos"
 	"code.cloudfoundry.org/perm/pkg/logx"
-	"code.cloudfoundry.org/perm/pkg/perm"
+	"code.cloudfoundry.org/perm"
 	"code.cloudfoundry.org/perm/pkg/sqlx"
 	"github.com/Masterminds/squirrel"
 	"github.com/go-sql-driver/mysql"

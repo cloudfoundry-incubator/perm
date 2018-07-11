@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"code.cloudfoundry.org/perm/pkg/logx"
-	"code.cloudfoundry.org/perm/pkg/perm"
+	"code.cloudfoundry.org/perm"
 )
 
 type HasPermissionQuery struct {

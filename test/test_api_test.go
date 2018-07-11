@@ -17,7 +17,7 @@ import (
 	"code.cloudfoundry.org/perm/pkg/api"
 	"code.cloudfoundry.org/perm/pkg/logx/logxfakes"
 	"code.cloudfoundry.org/perm/pkg/monitor/monitorfakes"
-	"code.cloudfoundry.org/perm/pkg/perm"
+	"code.cloudfoundry.org/perm"
 	"code.cloudfoundry.org/perm/pkg/permstats"
 	oidc "github.com/coreos/go-oidc"
 	. "github.com/onsi/ginkgo"

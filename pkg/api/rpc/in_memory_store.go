@@ -1,6 +1,6 @@
 package rpc
 
-import "code.cloudfoundry.org/perm/pkg/perm"
+import "code.cloudfoundry.org/perm"
 
 type InMemoryStore struct {
 	roles       map[string]perm.Role
