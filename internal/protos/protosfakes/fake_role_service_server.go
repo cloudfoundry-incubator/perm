@@ -4,7 +4,7 @@ package protosfakes
 import (
 	"sync"
 
-	"code.cloudfoundry.org/perm/api/protos"
+	"code.cloudfoundry.org/perm/internal/protos"
 	_ "github.com/gogo/protobuf/gogoproto"
 	"golang.org/x/net/context"
 )

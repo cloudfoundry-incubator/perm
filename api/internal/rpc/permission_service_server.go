@@ -3,7 +3,7 @@ package rpc
 import (
 	"context"
 
-	"code.cloudfoundry.org/perm/api/protos"
+	"code.cloudfoundry.org/perm/internal/protos"
 	"code.cloudfoundry.org/perm/api/internal/repos"
 	"code.cloudfoundry.org/perm/pkg/logx"
 	"code.cloudfoundry.org/perm"

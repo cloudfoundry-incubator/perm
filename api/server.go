@@ -14,7 +14,7 @@ import (
 	"google.golang.org/grpc/status"
 
 	"code.cloudfoundry.org/perm/api/internal/db"
-	"code.cloudfoundry.org/perm/api/protos"
+	"code.cloudfoundry.org/perm/internal/protos"
 	"code.cloudfoundry.org/perm/api/internal/repos"
 	"code.cloudfoundry.org/perm/api/internal/rpc"
 	"code.cloudfoundry.org/perm/pkg/logx"
