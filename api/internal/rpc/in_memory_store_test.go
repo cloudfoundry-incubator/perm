@@ -1,10 +1,10 @@
 package rpc_test
 
 import (
-	. "code.cloudfoundry.org/perm/api/rpc"
+	. "code.cloudfoundry.org/perm/api/internal/rpc"
 
-	"code.cloudfoundry.org/perm/api/repos"
-	. "code.cloudfoundry.org/perm/api/repos/reposbehaviors"
+	"code.cloudfoundry.org/perm/api/internal/repos"
+	. "code.cloudfoundry.org/perm/api/internal/repos/reposbehaviors"
 	. "github.com/onsi/ginkgo"
 )
 

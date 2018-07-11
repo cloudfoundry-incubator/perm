@@ -13,10 +13,10 @@ import (
 	"google.golang.org/grpc/stats"
 	"google.golang.org/grpc/status"
 
-	"code.cloudfoundry.org/perm/api/db"
+	"code.cloudfoundry.org/perm/api/internal/db"
 	"code.cloudfoundry.org/perm/api/protos"
-	"code.cloudfoundry.org/perm/api/repos"
-	"code.cloudfoundry.org/perm/api/rpc"
+	"code.cloudfoundry.org/perm/api/internal/repos"
+	"code.cloudfoundry.org/perm/api/internal/rpc"
 	"code.cloudfoundry.org/perm/pkg/logx"
 	"code.cloudfoundry.org/perm/pkg/permauth"
 	"code.cloudfoundry.org/perm/pkg/sqlx"

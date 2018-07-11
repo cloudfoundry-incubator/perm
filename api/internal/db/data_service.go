@@ -4,7 +4,7 @@ import (
 	"context"
 	"database/sql"
 
-	"code.cloudfoundry.org/perm/api/repos"
+	"code.cloudfoundry.org/perm/api/internal/repos"
 	"code.cloudfoundry.org/perm/pkg/logx"
 	"code.cloudfoundry.org/perm"
 	"code.cloudfoundry.org/perm/pkg/sqlx"

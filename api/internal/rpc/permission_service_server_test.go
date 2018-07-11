@@ -5,8 +5,8 @@ import (
 
 	"code.cloudfoundry.org/lager/lagertest"
 	"code.cloudfoundry.org/perm/api/protos"
-	"code.cloudfoundry.org/perm/api/repos/reposfakes"
-	"code.cloudfoundry.org/perm/api/rpc"
+	"code.cloudfoundry.org/perm/api/internal/repos/reposfakes"
+	"code.cloudfoundry.org/perm/api/internal/rpc"
 	"code.cloudfoundry.org/perm/pkg/logx"
 	"code.cloudfoundry.org/perm/pkg/logx/lagerx"
 	"code.cloudfoundry.org/perm/pkg/logx/logxfakes"

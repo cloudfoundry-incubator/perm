@@ -4,11 +4,11 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"code.cloudfoundry.org/perm/api/db"
-	"code.cloudfoundry.org/perm/api/repos"
+	"code.cloudfoundry.org/perm/api/internal/db"
+	"code.cloudfoundry.org/perm/api/internal/repos"
 	"code.cloudfoundry.org/perm/pkg/sqlx"
 
-	. "code.cloudfoundry.org/perm/api/repos/reposbehaviors"
+	. "code.cloudfoundry.org/perm/api/internal/repos/reposbehaviors"
 )
 
 var _ = Describe("DataService", func() {
