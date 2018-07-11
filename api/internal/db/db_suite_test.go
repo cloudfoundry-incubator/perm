@@ -1,4 +1,4 @@
-package perm_test
+package db_test
 
 import (
 	"code.cloudfoundry.org/perm/internal/migrations"
@@ -9,25 +9,22 @@ import (
 	"testing"
 )
 
-var (
-	testMySQLDB *sqlxtest.TestMySQLDB
-)
-
-func TestPerm(t *testing.T) {
+func TestDB(t *testing.T) {
 	RegisterFailHandler(Fail)
-	RunSpecs(t, "Perm Suite")
+	RunSpecs(t, "DB Suite")
 }
+
+var testDB *sqlxtest.TestMySQLDB
 
 var _ = BeforeSuite(func() {
 	var err error
 
-	testMySQLDB = sqlxtest.NewTestMySQLDB()
-
-	err = testMySQLDB.Create(migrations.Migrations...)
+	testDB = sqlxtest.NewTestMySQLDB()
+	err = testDB.Create(migrations.Migrations...)
 	Expect(err).NotTo(HaveOccurred())
 })
 
 var _ = AfterSuite(func() {
-	err := testMySQLDB.Drop()
+	err := testDB.Drop()
 	Expect(err).NotTo(HaveOccurred())
 })

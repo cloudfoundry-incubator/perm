@@ -11,7 +11,7 @@ import (
 	"code.cloudfoundry.org/lager"
 	"code.cloudfoundry.org/perm/cmd/flags"
 	"code.cloudfoundry.org/perm/pkg/logx/lagerx"
-	"code.cloudfoundry.org/perm/pkg/migrations"
+	"code.cloudfoundry.org/perm/internal/migrations"
 	"code.cloudfoundry.org/perm/pkg/sqlx"
 	"github.com/olekukonko/tablewriter"
 )

@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"code.cloudfoundry.org/lager"
-	"code.cloudfoundry.org/perm/pkg/cryptox"
-	"code.cloudfoundry.org/perm/pkg/ioutilx"
+	"code.cloudfoundry.org/perm/cmd/internal/cryptox"
+	"code.cloudfoundry.org/perm/cmd/internal/ioutilx"
 	"code.cloudfoundry.org/perm/pkg/sqlx"
 )
 

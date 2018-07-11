@@ -6,7 +6,7 @@ import (
 	"sync"
 
 	"code.cloudfoundry.org/perm/pkg/monitor"
-	"code.cloudfoundry.org/perm/pkg/perm"
+	"code.cloudfoundry.org/perm"
 )
 
 type FakeClient struct {

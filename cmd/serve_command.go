@@ -17,13 +17,13 @@ import (
 
 	"code.cloudfoundry.org/lager"
 	"code.cloudfoundry.org/perm/cmd/flags"
-	"code.cloudfoundry.org/perm/pkg/api"
+	"code.cloudfoundry.org/perm/api"
+	"code.cloudfoundry.org/perm/cmd/internal/cryptox"
+	"code.cloudfoundry.org/perm/cmd/internal/ioutilx"
 	"code.cloudfoundry.org/perm/pkg/logx/cef"
-	"code.cloudfoundry.org/perm/pkg/cryptox"
-	"code.cloudfoundry.org/perm/pkg/ioutilx"
 	"code.cloudfoundry.org/perm/pkg/logx/lagerx"
-	"code.cloudfoundry.org/perm/pkg/migrations"
-	"code.cloudfoundry.org/perm/pkg/permauth"
+	"code.cloudfoundry.org/perm/internal/migrations"
+	"code.cloudfoundry.org/perm/pkg/oidcx"
 	"code.cloudfoundry.org/perm/pkg/permstats"
 	"code.cloudfoundry.org/perm/pkg/sqlx"
 	"github.com/cactus/go-statsd-client/statsd"
@@ -143,7 +143,7 @@ func (cmd ServeCommand) Execute([]string) error {
 			},
 		}
 		oidcContext := oidc.ClientContext(context.Background(), tlsClient)
-		oidcIssuer, err := permauth.GetOIDCIssuer(tlsClient, fmt.Sprintf("%s/oauth/token", cmd.OAuth2URL))
+		oidcIssuer, err := oidcx.GetIssuer(tlsClient, fmt.Sprintf("%s/oauth/token", cmd.OAuth2URL))
 		if err != nil {
 			return err
 		}

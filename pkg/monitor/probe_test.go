@@ -5,7 +5,7 @@ import (
 
 	. "code.cloudfoundry.org/perm/pkg/monitor"
 	"code.cloudfoundry.org/perm/pkg/monitor/monitorfakes"
-	"code.cloudfoundry.org/perm/pkg/perm"
+	"code.cloudfoundry.org/perm"
 
 	"context"
 
